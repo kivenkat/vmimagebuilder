@@ -1,4 +1,4 @@
-#Azure Image Builder now supports Azure Stack
+# Azure Image Builder now supports Azure Stack
 
 With the help on Azure Image Builder, you can now build an image for Azure and Azure Stack using a consistent pipeline. The use cases for Azure Image builder on Azure Stack are as follows:
 1.	To prepare a custom image for Azure Stack/Azure, there are [various steps](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-upload-generic) that need to be followed to create a base image upon which customizations are added. These can not only be time consuming but also can give way to human error. With Azure Image Builder, you can use an Azure platform image as the base to do further customizations; all this without having to set up your own image building pipeline. 
