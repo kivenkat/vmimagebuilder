@@ -87,8 +87,8 @@ az resource show \
 
 Once the VHD has been created, copy it to an alternative location, as soon as possible. The VHD is stored in a storage account in the temporary Resource Group created when the Image Template is submitted to the Azure Image Builder service. If you delete the Image Template, then you will lose this VHD.
 ### Connected Scenario
-The machine you are attempting a copy with will need to be able to reach out to both Azure and Azure Stack environments. You can copy the VHD from the URL provided in the previous step to Azure Stack using  az storage blob copy start with the –source-uri parameter pointing to this VHD URI.
-You may also use Start-AzureStorageBlobCopy with the -AbsoluteUri parameter to achieve the same. 
+The machine you are attempting a copy with will need to be able to reach out to both Azure and Azure Stack environments. You can copy the VHD from the URL provided in the previous step to Azure Stack using  [az storage blob copy start](https://docs.microsoft.com/en-us/cli/azure/storage/blob/copy?view=azure-cli-latest#az-storage-blob-copy-start) with the --source-uri parameter pointing to this VHD URI.
+You may also use [Start-AzureStorageBlobCopy](https://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azurestorageblobcopy?view=azurermps-6.13.0) with the -AbsoluteUri parameter to achieve the same. 
 
 ```
 # Logging into my Azure Stack. The name of my environment is Orlando					 
@@ -110,15 +110,15 @@ az storage blob show --account-name strgrhelimg --container-name vhds --name hel
 ```
 
 ### Disconnected Scenario
-You can use Azcopy to download the VHD onto your local machine and manually move it to an Azure Stack storage account.
+You can use [Azcopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) to download the VHD onto your local machine and manually move it to an Azure Stack storage account.
 This VHD is now ready to be used to spin up new VMs on Azure Stack. You may follow the below optional steps to make the VHD available as a managed image or as a marketplace item. To make the image available as a marketplace item, you will need to AzCopy to a storage account visible on the Azure Stack Administrator portal.
 
 ## Step 4 (Optional): Create a Custom Marketplace Item with this VHD OR Convert VHD to a Managed Image
 
 ### Managed Image
-Follow the instructions here to create a managed image from a generalized VHD in a storage account. You can use this image going forward to create managed VMs.
+Follow the instructions [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource#create-an-image-from-a-vhd-in-a-storage-account) to create a managed image from a generalized VHD in a storage account. You can use this image going forward to create managed VMs.
 
 ### Custom Marketplace Item
-Follow this to offer the VM image on Azure Stack and this to publish a custom marketplace item referencing this image. This marketplace item will make the image available to all the Azure Stack tenants.
+Follow [this](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-add-vm-image) to offer the VM image on Azure Stack and [this](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-create-and-publish-marketplace-item) to publish a custom marketplace item referencing this image. This marketplace item will make the image available to all the Azure Stack tenants.
 
 
