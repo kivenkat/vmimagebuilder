@@ -111,6 +111,8 @@ az storage blob show --account-name strgrhelimg --container-name vhds --name hel
 
 ### Disconnected Scenario
 You can use [Azcopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy) to download the VHD onto your local machine and manually move it to an Azure Stack storage account.
+
+
 This VHD is now ready to be used to spin up new VMs on Azure Stack. You may follow the below optional steps to make the VHD available as a managed image or as a marketplace item. To make the image available as a marketplace item, you will need to AzCopy to a storage account visible on the Azure Stack Administrator portal.
 
 ## Step 4 (Optional): Create a Custom Marketplace Item with this VHD OR Convert VHD to a Managed Image
