@@ -46,7 +46,7 @@ rhelChecksum="”
 rhelLinkAddress=" "
 
 # download the example and configure it with your vars
-curl https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/6_Creating_a_Custom_Image_using_Red_Hat_Subscription_Licences_to_VHD/helloImageTemplateRhelBYOSVhd.json -o helloImageTemplateRhelBYOS1.json
+curl https://raw.githubusercontent.com/kivenkat/vmimagebuilder/master/helloImageTemplateRhelBYOSVhd.json -o helloImageTemplateRhelBYOS1.json
 
 sed -i -e "s/<subscriptionID>/$subscriptionID/g" helloImageTemplateRhelBYOS1.json
 sed -i -e "s/<rgName>/$imageResourceGroup/g" helloImageTemplateRhelBYOS1.json
