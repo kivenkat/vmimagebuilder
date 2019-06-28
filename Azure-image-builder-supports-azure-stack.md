@@ -104,7 +104,7 @@ az storage account list -g AzSImgBuilder --output table
 az storage container create -n vhds --account-name strgrhelimg 
 
 # Start the blob copy
-az storage blob copy start --destination-blob helloImageTemplateRhelBYOStoVhd1_20190624223943.vhd --destination-container vhds --account-name strgrhelimg --source-uri https://7a32caf33b93e447f53a6150.blob.core.windows.net/vhds/helloImageTemplateRhelBYOStoVhd1_20190624223943.vhd?se=2019-07-24T22%3A39%3A45Z&sig=TgPcztJ9%2FmDmYq%2F24%2BC%2BF9G5WPJc7D3TMas1xmvPLYo%3D&sp=r&sr=b&sv=2016-05-31
+az storage blob copy start --destination-blob helloImageTemplateRhelBYOStoVhd1_20190624223943.vhd --destination-container vhds --account-name strgrhelimg --source-uri "https://7a32caf33b93e447f53a6150.blob.core.windows.net/vhds/helloImageTemplateRhelBYOStoVhd1_20190624223943.vhd?se=2019-07-24T22%3A39%3A45Z&sig=TgPcztJ9%2FmDmYq%2F24%2BC%2BF9G5WPJc7D3TMas1xmvPLYo%3D&sp=r&sr=b&sv=2016-05-31"
 # confirming the copy is finished
 az storage blob show --account-name strgrhelimg --container-name vhds --name helloImageTemplateRhelBYOStoVhd1_20190624223943.vhd
 ```
