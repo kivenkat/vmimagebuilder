@@ -1,0 +1,28 @@
+{
+    "type": "Microsoft.VirtualMachineImages",
+    "apiVersion": "2019-05-01-preview",
+    "location": "<region>",
+    "dependsOn": [],
+    "properties": {
+        "source": {
+            "type": "ISO",
+            "sourceURI": "<rhelLinkAddress>",
+            "sha256Checksum": "<rhelChecksum>" 
+            
+        },
+        "customize": [
+            {
+                "type": "Shell",
+                "name": "HelloImageScript1",
+                "scriptUri": "https://raw.githubusercontent.com/kivenkat/vmimagebuilder/master/customizer2.sh"
+            }
+        ],
+        "distribute": 
+            [
+                {   "type":"VHD",
+                    "runOutputName": "<runOutputName>"
+    
+                }
+            ]
+        }
+    }
