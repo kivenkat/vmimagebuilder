@@ -14,7 +14,7 @@
             {
                 "type": "Shell",
                 "name": "HelloImageScript1",
-                "scriptUri": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/quickquickstarts/customizeScript.sh"
+                "scriptUri": "https://raw.githubusercontent.com/kivenkat/vmimagebuilder/master/customizer.sh"
             }
         ],
         "distribute": 
