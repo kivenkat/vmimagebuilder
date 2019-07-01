@@ -4,5 +4,5 @@ cd setuptools-7.0
 wget https://github.com/Azure/WALinuxAgent/archive/v2.2.36.zip
 unzip v2.2.36.zip
 cd WALinuxAgent-2.2.36
-sudo python setup.py install
-#sudo systemctl restart waagent
+#sudo python setup.py install
+sudo systemctl restart waagent
